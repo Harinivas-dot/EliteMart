@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+a.active hr{
+  display:block;
+}
+*{
+  font-family:Outfit;
+}
+.prata-regular {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+::-webkit-scrollbar{
+  display:none;
+} 
+
+ 
+
+@media (max-width:640px){
+  a.active{
+    background-color: black;
+    color:white;
+  }
+}
+
+/* index.css or App.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Define custom colors for a professional look with orange accents */
+  :root {
+    --navy-blue: #1e3a8a;
+    --dark-navy: #172554;
+    --teal: #2dd4bf;
+    --orange: #f97316; /* Orange color for accents */
+  }
+}
+
+@layer utilities {
+  /* Custom colors */
+  .bg-navyBlue {
+    background-color: var(--navy-blue);
+  }
+  .bg-darkNavy {
+    background-color: var(--dark-navy);
+  }
+  .text-teal {
+    color: var(--teal);
+  }
+  .text-orange {
+    color: var(--orange);
+  }
+  .border-orange {
+    border-color: var(--orange);
+  }
+  .focus:ring-orange {
+    --tw-ring-color: var(--orange);
+  }
+
+  /* Gradient Fade Animation */
+  @keyframes gradientFade {
+    0% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+  }
+
+  .animate-gradientFade {
+    animation: gradientFade 10s ease-in-out infinite;
+  }
+
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  /* Slide-in Animation for Logo */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-slideIn {
+    animation: slideIn 1s ease-in-out;
+  }
+}
